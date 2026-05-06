@@ -37,6 +37,7 @@ check_reeve_endpoint() {
 
 check_reeve_endpoint /health/live
 check_reeve_endpoint /health/ready
+check_reeve_endpoint /v1/about
 check_reeve_endpoint /smoke/audit-chain-intact
 check_reeve_endpoint /smoke/stack-mode-nominal
 check_reeve_endpoint /smoke/registries-populated
