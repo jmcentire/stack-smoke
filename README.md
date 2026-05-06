@@ -6,9 +6,18 @@ unit and integration tests.
 
 ## Current Scope
 
-Wave 1 and 2 component boundaries are still landing, so this scaffold does
-not pretend to run the full Reeve -> Baton -> Sentinel -> Tessera path yet.
-It verifies local prerequisites and records the target flow.
+This repo is the continuous-smoke home for the Exemplar stack. It starts with
+declaration/runtime-surface checks and live Reeve smoke endpoints, then grows
+into the full cross-component exercise. Safety and observability integrations
+are proactive guardrails here; they are not deferred until a user-visible
+failure proves the need.
+
+Current checks:
+
+- Local checkout/artifact presence for the full Exemplar safety toolchain.
+- Reeve live smoke endpoints when `REEVE_SMOKE_BASE_URL` is set.
+- Scenario documentation for the target Reeve -> Baton -> Sentinel -> Tessera
+  path plus the broader trust, story, anomaly, emergency, and authority loops.
 
 ## Target Flow
 
@@ -22,10 +31,13 @@ It verifies local prerequisites and records the target flow.
 ## Commands
 
 ```bash
-make check
+make check       # local repo/artifact prerequisites
+make check-live  # live Reeve smoke endpoints
+make continuous  # repeat both checks; interval controlled by SMOKE_INTERVAL_SECONDS
 ```
 
-`make check` verifies the participating local repos and generated operational
-artifacts exist. Full end-to-end execution lands after aegis/covenant/vigil
-ADRs and Track 2 witness/scram contracts stabilize.
+`make check-live` defaults to `https://reeve-staging.fly.dev`. Override with
+`REEVE_SMOKE_BASE_URL=https://reeve.fly.dev` for production or a local URL.
 
+`make continuous` is intentionally simple: run it under a process supervisor,
+cron, or CI schedule until the harness has its own scheduler.
