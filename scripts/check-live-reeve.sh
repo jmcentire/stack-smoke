@@ -44,3 +44,4 @@ check_reeve_endpoint /smoke/manifest-quarantine-bounded
 check_reeve_endpoint /smoke/contract-violations-bounded
 
 check_endpoint "$baton_base_url" /api/snapshot "baton" "reeve-prod"
+check_endpoint "$baton_base_url" /v1/about "baton-about" '"component": "baton"'

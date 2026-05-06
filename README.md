@@ -17,6 +17,7 @@ Current checks:
 - Local checkout/artifact presence for the full Exemplar safety toolchain.
 - Reeve live smoke endpoints.
 - Baton live dashboard/control snapshot.
+- Baton live component/version metadata.
 - Scenario documentation for the target Reeve -> Baton -> Sentinel -> Tessera
   path plus the broader trust, story, anomaly, emergency, and authority loops.
 
@@ -34,6 +35,7 @@ Current checks:
 ```bash
 make check       # local repo/artifact prerequisites
 make check-live  # live Reeve smoke endpoints
+make stack-versions  # live component version/drift checks
 make continuous  # repeat both checks; interval controlled by SMOKE_INTERVAL_SECONDS
 ```
 
