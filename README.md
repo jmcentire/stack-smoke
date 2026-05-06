@@ -15,7 +15,8 @@ failure proves the need.
 Current checks:
 
 - Local checkout/artifact presence for the full Exemplar safety toolchain.
-- Reeve live smoke endpoints when `REEVE_SMOKE_BASE_URL` is set.
+- Reeve live smoke endpoints.
+- Baton live dashboard/control snapshot.
 - Scenario documentation for the target Reeve -> Baton -> Sentinel -> Tessera
   path plus the broader trust, story, anomaly, emergency, and authority loops.
 
@@ -36,8 +37,10 @@ make check-live  # live Reeve smoke endpoints
 make continuous  # repeat both checks; interval controlled by SMOKE_INTERVAL_SECONDS
 ```
 
-`make check-live` defaults to `https://reeve-staging.fly.dev`. Override with
-`REEVE_SMOKE_BASE_URL=https://reeve.fly.dev` for production or a local URL.
+`make check-live` defaults to `https://reeve-staging.fly.dev` for Reeve and
+`https://baton-stack.fly.dev` for Baton. Override with
+`REEVE_SMOKE_BASE_URL=https://reeve.fly.dev` or
+`BATON_SMOKE_BASE_URL=http://localhost:9900` for production or local targets.
 
 `make continuous` is intentionally simple: run it under a process supervisor,
 cron, or CI schedule until the harness has its own scheduler.
