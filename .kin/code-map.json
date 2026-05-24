@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "stack-smoke",
+    "description": "Code map exported from Kindex for stack-smoke.",
+    "languages": [
+      "Sh"
+    ],
+    "frameworks": [],
+    "analyzedAt": "2026-05-24T15:05:47",
+    "gitCommitHash": "b6f26df99a21daaf055a1a33573e114dcbcf97ed"
+  },
+  "nodes": [
+    {
+      "id": "code-mod-stack-smoke-5b6853877935",
+      "type": "file",
+      "name": "scripts/check-stack-versions.sh",
+      "filePath": "scripts/check-stack-versions.sh",
+      "summary": "Language: Sh | Path: scripts/check-stack-versions.sh | ~34 lines ## Functions - check_about()",
+      "tags": [
+        "code",
+        "sh"
+      ],
+      "complexity": 2,
+      "languageNotes": {
+        "language": "Sh",
+        "kindexType": "artifact",
+        "toolTier": "A"
+      }
+    },
+    {
+      "id": "code-mod-stack-smoke-2ac7c7740f3c",
+      "type": "file",
+      "name": "scripts/check-live-reeve.sh",
+      "filePath": "scripts/check-live-reeve.sh",
+      "summary": "Language: Sh | Path: scripts/check-live-reeve.sh | ~33 lines ## Functions - check_endpoint()",
+      "tags": [
+        "code",
+        "sh"
+      ],
+      "complexity": 2,
+      "languageNotes": {
+        "language": "Sh",
+        "kindexType": "artifact",
+        "toolTier": "A"
+      }
+    },
+    {
+      "id": "code-mod-stack-smoke-7b533eaeeaa6",
+      "type": "file",
+      "name": "scripts/check-prereqs.sh",
+      "filePath": "scripts/check-prereqs.sh",
+      "summary": "Language: Sh | Path: scripts/check-prereqs.sh | ~7 lines ## Functions - require_path()",
+      "tags": [
+        "code",
+        "sh"
+      ],
+      "complexity": 1,
+      "languageNotes": {
+        "language": "Sh",
+        "kindexType": "artifact",
+        "toolTier": "A"
+      }
+    }
+  ],
+  "edges": [],
+  "layers": [
+    {
+      "id": "core",
+      "name": "Core",
+      "description": "Kindex-inferred core layer.",
+      "nodeIds": [
+        "code-mod-stack-smoke-2ac7c7740f3c",
+        "code-mod-stack-smoke-5b6853877935",
+        "code-mod-stack-smoke-7b533eaeeaa6"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Core",
+      "description": "Review 3 node(s) in the Core layer.",
+      "nodeIds": [
+        "code-mod-stack-smoke-2ac7c7740f3c",
+        "code-mod-stack-smoke-5b6853877935",
+        "code-mod-stack-smoke-7b533eaeeaa6"
+      ]
+    }
+  ]
+}
