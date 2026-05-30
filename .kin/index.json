@@ -1,0 +1,45 @@
+{
+  "domains": [
+    "code",
+    "sh"
+  ],
+  "node_count": 3,
+  "nodes": [
+    {
+      "domains": [
+        "code",
+        "sh"
+      ],
+      "id": "code-mod-stack-smoke-2ac7c7740f3c",
+      "title": "scripts/check-live-reeve.sh",
+      "type": "artifact",
+      "updated_at": "2026-05-30T14:50:31",
+      "weight": 0.5
+    },
+    {
+      "domains": [
+        "code",
+        "sh"
+      ],
+      "id": "code-mod-stack-smoke-5b6853877935",
+      "title": "scripts/check-stack-versions.sh",
+      "type": "artifact",
+      "updated_at": "2026-05-30T14:50:31",
+      "weight": 0.5
+    },
+    {
+      "domains": [
+        "code",
+        "sh"
+      ],
+      "id": "code-mod-stack-smoke-7b533eaeeaa6",
+      "title": "scripts/check-prereqs.sh",
+      "type": "artifact",
+      "updated_at": "2026-05-30T14:50:31",
+      "weight": 0.5
+    }
+  ],
+  "repo": "stack-smoke",
+  "source_updated_at": "2026-05-30T14:50:31",
+  "version": 1
+}
